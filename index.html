@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="MusicCss.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="../Css%20Files/font-awesome.css">
+    <title>MyMusic Dunia.com</title>
+</head>
+<body>
+
+<div class="main-div">
+    <nav>
+        <img src="img_1.png" alt="">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Specialisations</a>
+        <a href="#">Products</a>
+        <a href="#">Contact</a>
+    </nav>
+
+
+<div class="sec-div">
+
+    <div class="text">
+        <h1>The Best <br> Music Are <br> Here</h1>
+    </div>
+    <div class="music">
+        <h3>Click Here To Listen</h3>
+        <img src="img_2.png" alt="" id="play">
+        <img src="img_3.png" alt="" id="pause">
+    </div>
+
+
+</div>
+    <audio src="song.mp3" id="audio">
+
+    </audio>
+</div>
+<script>
+
+    let PLAY = document.querySelector("#play");
+    PLAY.addEventListener('click',function () {
+        let SONG = document.querySelector("#audio");
+        if(SONG.paused){
+            SONG.play();
+            PLAY.src="img_3.png"
+        }
+        else{
+
+            SONG.pause();
+            PLAY.src="img_2.png"
+
+        }
+
+    });
+
+</script>
+</body>
+</html>
